@@ -1,0 +1,114 @@
+<CadastrarScreen>:
+  
+    MDCard:
+        size_hint: None, None
+        size: 280, 500
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        orientation: "vertical"
+   
+        
+        MDFloatLayout:
+            orientation:'vertical'
+            Image:
+                source: "pictures/Lelis tela 2.png"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size: 280, 500
+
+            MDLabel:
+                id: error_label
+                text: ""
+                width: 200
+                theme_text_color: "Error"
+                size_hint_x: None
+                pos_hint: {"center_x": 0.5, "center_y": 0.83}
+                valign: "middle"
+                halign: "center"
+                font_size: "11sp"     
+
+            MDIconButton: 
+                icon_size: "34sp"
+                pos_hint: {"center_x": .85, "center_y": .9}
+                icon:"pictures/logout-custom (1).png"
+                on_release: root.sair() 
+
+            MDTextField:
+                id: nome
+                hint_text: 'Nome'
+                size_hint_x: None
+                helper_text_mode: "on_focus"
+                width: 200
+                icon_right: "pencil"
+                pos_hint: {"center_x": 0.5, "center_y": 0.8}          
+            
+            MDTextField:
+                id: sobrenome
+                hint_text: 'Sobrenome'
+                size_hint_x: None
+                helper_text_mode: "on_focus"
+                width: 200
+                icon_right: "pencil"
+                pos_hint: {"center_x": 0.5, "center_y": 0.7}
+  
+            MDTextField:
+                id: cpf
+                hint_text: 'CPF'
+                max_text_length: 11
+                size_hint_x: None
+                helper_text_mode: "on_focus"
+                width: 200
+                icon_right: "card-account-details-outline"
+                pos_hint: {"center_x": 0.5, "center_y": 0.6}
+
+            MDTextField:
+                id: email
+                hint_text: 'E-mail'
+                size_hint_x: None
+                helper_text_mode: "on_focus"
+                width: 200
+                icon_right: "email"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}              
+
+
+            MDTextField:
+                id: password1
+                hint_text: 'Digite uma senha'
+                size_hint_x: None
+                max_text_length: 6
+                width: 200
+                password: True
+                icon_right: "eye-off"
+                pos_hint: {"center_x": 0.5, "center_y": 0.4}
+           
+            MDTextField:
+                id: password2
+                hint_text: 'Repita a senha'
+                size_hint_x: None
+                width: 200
+                password: True
+                icon_right: "eye-off"
+                pos_hint: {"center_x": 0.5, "center_y": 0.28}                
+
+            MDFillRoundFlatButton:
+                id:cadastrar
+                text: 'Cadastrar'
+                text_color: "white"
+
+                on_release: root.cadastro_user()  
+                
+                pos_hint: {"center_x": 0.5, "center_y": 0.18}
+
+            MDFloatLayout:
+                size_hint: .60, .25
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .5, "center_y": .2}                        
+                
+                MDIconButton: 
+                    icon_size: "40sp"
+                    pos_hint: {"center_x": .5, "center_y": .1}
+                    icon:"pictures/pan-left-custom.png"
+                    on_release: root.tela_login() 
+
+
+
+
+
