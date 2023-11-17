@@ -1,0 +1,109 @@
+<LoginScreen>
+
+  MDCard:
+    size_hint: None, None
+    size: 280, 500
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+    orientation: "vertical"
+
+    MDFloatLayout:
+
+      Image:
+        source: "pictures/Lelis Tela Login.png"
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        size: 280, 500
+
+      MDIconButton: 
+        icon_size: "26sp"
+        pos_hint: {"center_x": .85, "center_y": .9}
+        icon:"pictures/logout-custom (1).png"
+        on_release: root.sair()    
+
+      MDLabel:
+        id: error_label
+        text: ""
+        width: 200
+        theme_text_color: "Error"
+        size_hint_x: None
+        pos_hint: {"center_x": 0.5, "center_y": 0.9}
+        valign: "middle"
+        halign: "center"
+        font_size: "12sp" 
+           
+      MDTextField:
+        id: cpf
+        hint_text: 'CPF'
+        size_hint_x: None
+        helper_text_mode: "on_focus"
+        width: 200
+        icon_right: "account"
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+
+
+      MDTextField:
+       
+       
+        id: password
+        hint_text: 'Senha'
+        size_hint_x: None
+        width: 200
+        password: True
+        helper_text_mode: "on_focus"
+        icon_right: "eye-off"
+        pos_hint: {"center_x": 0.5, "center_y": 0.51}
+
+      MDFillRoundFlatButton:
+        text: 'LOGIN'
+
+        opposite_colors: True
+        elevation: 8
+        md_bg_color: 77/255, 145/255, 226/255, 62/255
+
+        theme_text_color: "Custom"
+        text_color: 00/255, 79/255, 172/255, 100/255
+        
+        id:login
+        on_release: root.on_login()  
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+                            
+      MDFillRoundFlatButton:
+        text: 'CADASTRAR'
+
+
+        elevation: 8
+        md_bg_color: 74/255, 144/255, 226/255, 1
+
+        theme_text_color: "Custom"
+        text_color: 1, 1, 1, 1
+
+
+        on_release: root.cadastrar()  
+        pos_hint: {"center_x": 0.5, "center_y": 0.29}
+
+                
+      MDLabel:
+        text: 'Logar com as Redes Sociais:'
+        font_size: '12sp'  # Define o tamanho da fonte como 11 pixels (11sp)
+        pos_hint: {"center_x": 0.70,  "center_y": 0.18}
+        color: 0, 0, 255
+                    
+      MDIconButton:
+        icon: 'facebook'
+        pos_hint: {"center_x": 0.15, "center_y": 0.1}
+
+      MDIconButton:
+        icon: 'linkedin'
+        pos_hint: {"center_x": 0.5, "center_y": 0.1}        
+
+      MDIconButton:
+        icon: 'google'
+        pos_hint: {"center_x": 0.32, "center_y": 0.1}
+                        
+      MDIconButton:
+        icon: 'instagram'
+        pos_hint: {"center_x": 0.67, "center_y": 0.1} 
+
+      MDIconButton:
+        icon: 'github'
+        pos_hint: {"center_x": 0.85, "center_y": 0.1}   
