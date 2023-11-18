@@ -1,0 +1,7 @@
+Kaki==0.1.9
+Kivy==2.2.1
+kivymd==1.1.1
+Requests==2.31.0
+Prompt-toolkit==3.0.39
+Watchdog==3.0.0
+Build==1.0.3
