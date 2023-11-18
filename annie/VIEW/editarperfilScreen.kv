@@ -1,0 +1,88 @@
+<EditarPerfilScreen>:
+  
+    MDCard:
+        size_hint: None, None
+        size: 280, 500
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        orientation: "vertical"
+
+        
+        MDFloatLayout:
+            orientation:'vertical'
+            
+            Image:
+                source: "pictures/Lelis tela 2.png"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size: 280, 500
+
+
+            MDIconButton: 
+                icon_size: "34sp"
+                pos_hint: {"center_x": .85, "center_y": .9}
+                icon:"pictures/logout-custom (1).png"
+                on_release: root.sair()                 
+
+            MDCard:
+                radius: 30, 30, 30, 30
+                size_hint: .38, .23
+                orientation:'vertical'
+                shadow_softness: 9
+                shadow_offset: (3, -3)
+                elevation: 3
+                pos_hint: {"center_x": .30, "center_y": .6}
+                
+                MDIconButton: 
+
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    icon: "pictures/account-tie-custom.png"
+                    icon_size: "52sp"
+                    on_release: root.tela_servicos()
+                
+                MDLabel:
+                    font_size: "13sp"
+                    text:"Editar perfil Profissional"
+                    theme_text_color: "Custom"
+                    text_color: 74/255, 144/255, 226/255, 1
+                    halign: "center"
+                    pos_hint: {"center_x": .5, "center_y": 4}             
+        
+
+            
+            
+            MDCard:
+                radius: 30, 30, 30, 30
+                size_hint: .38, .23
+                orientation:'vertical'
+                shadow_softness: 9
+                shadow_offset: (3, -3)
+                elevation: 3
+                pos_hint: {"center_x": .7, "center_y": .6}
+
+                MDIconButton: 
+
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    icon: "pictures/account-circle-custom.png"
+                    icon_size: "52sp"
+                    on_release: root.cadastrar()
+                
+                MDLabel:
+                    font_size: "13sp"
+                    text:"Editar perfil de Usuário"
+                    theme_text_color: "Custom"
+                    text_color: 74/255, 144/255, 226/255, 1
+                    halign: "center"
+                    pos_hint: {"center_x": .5, "center_y": .4}  
+                    
+                    
+                    
+            MDFloatLayout:
+                size_hint: .60, .25
+
+                pos_hint: {"center_x": .5, "center_y": .3}                        
+                
+                MDIconButton: 
+                    icon_size: "40sp"
+                    pos_hint: {"center_x": .5, "center_y": .1}
+                    icon:"pictures/pan-left-custom.png"
+                    on_release: root.tela_servicos()                
+                            

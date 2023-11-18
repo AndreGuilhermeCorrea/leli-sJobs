@@ -1,0 +1,117 @@
+<PetScreen>:
+  
+    MDCard:
+        size_hint: None, None
+        size: 280, 500
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        orientation: "vertical"
+
+        
+        MDFloatLayout:
+            orientation:'vertical'
+            Image:
+                source: "pictures/Lelis tela 2.png"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size: 280, 500
+                
+            MDTextField:
+                hint_text: "Pesquisar..."
+                icon_right: "magnify"
+                icon_right_color: app.theme_cls.primary_color
+                width: 220
+                size_hint_x: None
+                pos_hint: {"center_x": 0.5, "center_y": 0.81}
+                valign: "middle"
+
+            MDLabel:
+                text: "PET'S" 
+                bold: "true"
+                width: 220
+                halign:"center"
+                pos_hint: {"center_x": 0.5, "center_y": 0.75}
+                theme_text_color: "Custom"
+                text_color: 66/255, 0/255, 80/255, 100
+            
+            MDBoxLayout:
+                size_hint: .80, .55
+                pos_hint: {"center_x": 0.5, "center_y": 0.45}
+                
+                MDScrollView:
+                    orientation:'vertical' 
+                    MDList:
+                        
+                        OneLineAvatarIconListItem:
+                            text: "Gatos"
+                            width: 220
+                            IconLeftWidget:
+                                icon: "pictures/cat-custom.png"                            
+                                
+                        OneLineAvatarIconListItem:
+                            text: "Cães"
+
+                            IconLeftWidget:
+                                icon: "pictures/dog-side-custom.png"                            
+                                
+                        OneLineAvatarIconListItem:
+                            text: "Aves"
+
+                            IconLeftWidget:
+                                icon: "pictures/bird-custom.png"                            
+                        
+                        OneLineAvatarIconListItem:
+                            text: "Vacas"
+
+                            IconLeftWidget:
+                                icon: "pictures/cow-custom.png"                            
+
+                        OneLineAvatarIconListItem:
+                            text: "Equínos"
+
+                            IconLeftWidget:
+                                icon: "pictures/horse-custom.png" 
+                    
+                        OneLineAvatarIconListItem:
+                            text: "Silvestres"
+
+                            IconLeftWidget:
+                                icon: "pictures/kangaroo-custom.png"                            
+                        
+
+
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .20, "center_y": .08}                        
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"pictures/home-custom.png"
+                    on_release: root.voltar_para_home()
+            
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .40, "center_y": .08}                        
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"pictures/format-list-bulleted-custom (1).png"
+                    on_release: root.listar()                      
+            
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .60, "center_y": .08}                        
+                
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"pictures/heart-outline-custom.png"                            
+                    on_release: root.favoritos()
+
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .80, "center_y": .08}
+                        
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"pictures/account-cog-custom.png"
+                    on_release: root.editaPerfil()           
