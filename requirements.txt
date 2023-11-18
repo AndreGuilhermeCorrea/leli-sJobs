@@ -1,3 +1,25 @@
+#IDE
+VS Code
+
+#OS
+Windows
+
+#Extensions
+Python==v2023.20.0
+Python Extension Pack==v1.7.0
+GitLens — Git Supercharged==v14.5.0
+Code Runner==v0.12.1
+Dracula==v2.24.3
+Color Highlight==v2.5.0
+PowerShell==v2023.8.0
+
+#Repositories
+GitHub
+
+#DataBase
+Google Firebase Realtime Database
+
+#libraries 
 Kaki==0.1.9
 Kivy==2.2.1
 kivymd==1.1.1
@@ -5,3 +27,6 @@ Requests==2.31.0
 Prompt-toolkit==3.0.39
 Watchdog==3.0.0
 Build==1.0.3
+Jinja2==3.1.2
+ipreqs==0.4.13
+
