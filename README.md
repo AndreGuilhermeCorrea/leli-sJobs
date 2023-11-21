@@ -10,11 +10,11 @@ Orientador: Prof. (º) GUSTAVO MOREIRA CALIXTO.
 
 Componentes do grupo:
 
-Andre Guilherme Correa
-Annie Caroline Tenorio Ferreira De Lima
-Eric Lincoln Demate
-Mateus Cavalcante Quixaba Galvao
-Tiago De Sousa Climaco Ferreira
+Andre Guilherme Correa;
+Annie Caroline Tenorio Ferreira De Lima;
+Eric Lincoln Demate;
+Mateus Cavalcante Quixaba Galvao; e
+Tiago De Sousa Climaco Ferreira.
 
 Na primeira entrega do PI o grupo apresentou a proposta da aplicação desejada, entendendo uma necessidade real e refletindo uma proposta de negócio sugerida.
 Na segunda entrega do PI o grupo revisitou o projeto da primeira entrega e realizou a prova de conceito, preparou o ambiente de desenvolvimento conforme o arquivo requirements.txt junto ao projeto, desenvolveu o frontend e backend com os respectivos repositórios associados além do vídeo explicativo do projeto conforme link abaixo:
