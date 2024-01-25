@@ -1,4 +1,5 @@
 # leli-sJobs
+![app-screen](https://github.com/AndreGuilhermeCorrea/leli-sJobs/assets/105138998/27e93337-2069-4f27-8bae-6487b1363c98)
 
 DESENVOLVIMENTO DE SISTEMAS ORIENTADO A DISPOSITIVOS MÓVEIS E BASEADOS NA WEB
 Projeto Integrador IV
