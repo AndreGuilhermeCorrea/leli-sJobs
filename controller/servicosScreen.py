@@ -44,14 +44,4 @@ class ServicosScreen(MDScreen):
         self.manager.current = "listartodosScreen"
         
     def sair(self):
-        sys.exit()        
-        
-            
-        
-        
-        
-        
-        
-        
-        
-                
+        sys.exit()
