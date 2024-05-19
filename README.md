@@ -20,5 +20,9 @@ Tiago De Sousa Climaco Ferreira.
 
 Link do vídeo explicativo:
 
+Link's dos bancos de dados noSQL:
+https://lelisjobschatdb-default-rtdb.firebaseio.com/
+https://lelisbase-default-rtdb.firebaseio.com/
+
 
 
