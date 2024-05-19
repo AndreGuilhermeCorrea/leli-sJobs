@@ -5,12 +5,11 @@
         size: 280, 500
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         orientation: "vertical"
-   
-        
+           
         MDFloatLayout:
             orientation:'vertical'
             Image:
-                source: "pictures/Lelis tela 2.png"
+                source: "pictures/leli2.png"
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 size: 280, 500
 
@@ -28,7 +27,7 @@
             MDIconButton: 
                 icon_size: "34sp"
                 pos_hint: {"center_x": .85, "center_y": .9}
-                icon:"pictures/logout-custom (1).png"
+                icon:"logout"
                 on_release: root.sair() 
 
             MDTextField:
@@ -105,10 +104,5 @@
                 MDIconButton: 
                     icon_size: "40sp"
                     pos_hint: {"center_x": .5, "center_y": .1}
-                    icon:"pictures/pan-left-custom.png"
+                    icon:"pan-left"
                     on_release: root.tela_login() 
-
-
-
-
-
