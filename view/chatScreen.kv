@@ -1,0 +1,117 @@
+<ChatScreen>:
+    MDCard:
+        size_hint: None, None
+        size: 280, 500
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        orientation: "vertical"
+
+        MDFloatLayout:
+            orientation: 'vertical'
+
+            Image:
+                source: "pictures/leli2.png"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size: 280, 500
+
+            MDFloatLayout:
+                size_hint: None, None
+                size: 230, 360
+                background_color: 0, 0, 0, .5
+                pos_hint: {"center_x": 0.5, "center_y": 0.48}
+                md_bg_color: 1, 1, 1, 1
+                line_color: 0, 0, 0, 1
+                
+                MDFloatLayout:
+                    size_hint: None, None
+                    size: 230, 50
+                    background_color: 0, 0, 0, .5
+                    pos_hint: {"center_x": 0.5, "center_y": 1.03}
+                    md_bg_color: 0, 0, 0, 0
+                    line_color: 0, 0, 0, 0
+
+                    MDIconButton:
+                        size: 20, 20
+                        pos_hint: {"center_x": 0.1, "center_y": 0.7}
+                        icon:"arrow-left"
+                        on_release: root.volta()
+
+                    MDIconButton:
+                        icon_size: "34sp"
+                        pos_hint: {"center_x": .9, "center_y": .9}
+                        icon:"logout"
+                        on_release: root.sair() 
+            
+                MDScrollView:
+                    id: chat_history_scroll
+                    size_hint: None, None
+                    size: 230, 350
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    do_scroll_x: False
+
+                    MDList:
+                        id: list_chat
+                        size_hint_y: None
+                        height: self.minimum_height  # Permite que a lista se expanda conforme necessário               
+                
+                MDTextField:
+                    id: chat_text_input
+                    hint_text: "Digite sua mensagem..."
+                    multiline: False
+                    mode: "round"
+                    max_text_length: 150
+                    helper_text: ""
+                    cursor_color: 0, 0, 0, 1
+                    size_hint: None, None
+                    size: 180, 20  
+                    pos_hint: {"center_x": 0.41, "center_y": 0.08} 
+                    on_text_validate: root.enviar_msg()          
+                    
+                
+                MDFloatLayout:
+                    size: 25, 25
+                    background_color: 0, 0, 0, 0
+                    pos_hint: {"center_x": 0.89, "center_y": 0.085}                        
+                    
+                    MDIconButton: 
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        icon:"send"
+                        on_press: root.enviar_msg()
+
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .20, "center_y": .08}                        
+                
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"home"
+                    on_release: root.voltar_para_home()
+            
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .40, "center_y": .08}                        
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"format-list-bulleted"
+                    on_release: root.listar()                      
+            
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .60, "center_y": .08}                        
+                
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"heart-outline"                            
+                    on_release: root.favoritos()
+
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .80, "center_y": .08}
+                        
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"account-cog"
+                    on_release: root.editaPerfil()           

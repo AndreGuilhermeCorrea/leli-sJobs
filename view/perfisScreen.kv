@@ -1,0 +1,257 @@
+<PerfisScreen>
+
+    MDCard:
+        size_hint: None, None
+        size: 280, 500
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        orientation: "vertical"
+
+        
+        MDFloatLayout:
+            orientation:'vertical'
+            
+            Image:
+                source: "pictures/leli2.png"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size: 280, 500
+
+            MDFloatLayout:
+                size_hint: None, None
+                size: 230, 360
+                background_color: 0, 0, 0, .5
+                pos_hint: {"center_x": 0.5, "center_y": 0.48}
+                md_bg_color: 1, 1, 1, 1
+                line_color: 0, 0, 0, 1
+
+                MDFloatLayout:
+                    size_hint: None, None
+                    size: 230, 28
+                    background_color: 0, 0, 0, .5
+                    pos_hint: {"center_x": 0.5, "center_y": 1.03}
+                    md_bg_color: 0, 0, 0, 0
+                    line_color: 0, 0, 0, 0
+
+                    MDIconButton:
+                        size: 20, 20
+                        pos_hint: {"center_x": 0.1, "center_y": 0.7}
+                        icon:"arrow-left"
+                        on_release: root.volta()
+
+                    MDIconButton:
+                        icon_size: "34sp"
+                        pos_hint: {"center_x": .9, "center_y": .9}
+                        icon:"logout"
+                        on_release: root.sair() 
+
+                MDFloatLayout:
+                    size_hint: None, None
+                    size: 230, 30
+                    background_color: 0, 0, 0, .5
+                    pos_hint: {"center_x": 0.5, "center_y": .9}
+                    md_bg_color: 0, 0, 0, 0
+                    line_color: 0, 0, 0, 0
+
+                    MDIconButton:
+                        size: 20, 20
+                        pos_hint: {"center_x": 0.1, "center_y": 0.5}
+                        icon:"magnify"
+
+
+                    MDTextField:
+                        id: procura_perfil
+                        size: 230, 20
+                        hint_text: ''
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        helper_text: "Digite o nome do contato..."
+                        helper_text_mode: "on_focus"
+                        size_hint_x: .7
+
+                    MDIconButton:
+                        size: 20, 20 
+                        pos_hint: {"center_x": 0.9, "center_y": 0.5}
+                        icon:"dots-vertical"                 
+
+                ScrollView:
+                    size_hint: None, None
+                    size: 230, 280
+                    background_color: 0, 0, 0, .5
+                    pos_hint: {"center_x": 0.5, "center_y": 0.42}
+                    md_bg_color: 0, 0, 0, 1
+                    line_color: 0, 0, 0, 1
+
+                    MDList:  # Lista de contatos
+                        size_hint_y: None
+                        height: self.minimum_height  # Permite que a lista se expanda conforme necessário
+
+                        # Contatos fictícios
+                        TwoLineAvatarListItem:
+                            text: "Andre Guilherme Correa"
+                            secondary_text: "correandre8@gmail.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp" 
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/andre.png"
+
+                        TwoLineAvatarListItem:
+                            text: "Eric Lincoln Demate"
+                            secondary_text: "eric@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp" 
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/eric.png"   
+
+                        TwoLineAvatarListItem:
+                            text: "Tiago De Sousa Climaco Ferreira"
+                            secondary_text: "tiago@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp" 
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/tiago.png" 
+
+                        TwoLineAvatarListItem:
+                            text: "Annie Caroline Tenorio Ferreira De Lima"
+                            secondary_text: "annie@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp" 
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/annie.png"                                                                                              
+                        
+                        TwoLineAvatarListItem:
+                            text: "Guido Van Rossun"
+                            secondary_text: "guido@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp" 
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/perfil1.png"
+                                
+
+ 
+                        TwoLineAvatarListItem:
+                            text: "Bill Gates"
+                            secondary_text: "bill@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp" 
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/bill.png"
+
+                        TwoLineAvatarListItem:
+                            text: "Paul Allen"
+                            secondary_text: "paul@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp"
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/paulAllen.png"
+
+                        TwoLineAvatarListItem:
+                            text: "Steve Jobs"
+                            secondary_text: "steeve@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp"
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/steeve.png"
+                        
+                        TwoLineAvatarListItem:
+                            text: "Antonio Oliveira Santos"
+                            secondary_text: "toninho@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp"
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/toninho.png"
+
+                        TwoLineAvatarListItem:
+                            text: "Steve Wozniak"
+                            secondary_text: "steve@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp"
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/steveW.png"
+
+                        TwoLineAvatarListItem:
+                            text: "Albert Einstein"
+                            secondary_text: "albert@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp"
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            ImageLeftWidget:
+                                source: "pictures/albert.png"
+
+
+                        TwoLineAvatarListItem:
+                            text: "Silvio Santos"
+                            secondary_text: "silvio@email.com"
+                            font_size: "15sp"  # Definindo o tamanho da fonte para o texto principal
+                            secondary_font_style: "Caption"  # Definindo o estilo da fonte para o texto secundário
+                            secondary_font_size: "12sp"
+                            on_release: root.menu_popup(secondary_text=self.secondary_text)
+                            
+                            ImageLeftWidget:
+                                source: "pictures/silvio.png"
+
+
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .20, "center_y": .08}                        
+                
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"home"
+                    on_release: root.voltar_para_home()
+            
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .40, "center_y": .08}                        
+                
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"format-list-bulleted"
+                    on_release: root.listar()                      
+            
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .60, "center_y": .08}                        
+                
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"heart-outline"                            
+                    on_release: root.favoritos()
+
+            MDFloatLayout:
+                size_hint: .26, .14
+                background_color: 0, 0, 0, 0
+                pos_hint: {"center_x": .80, "center_y": .08}
+                        
+                MDIconButton: 
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    icon:"account-cog-outline"
+                    on_release: root.editaPerfil()           
+
+
+
+
+
+
+
