@@ -5,20 +5,18 @@
         size: 280, 500
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         orientation: "vertical"
-
         
         MDFloatLayout:
             orientation:'vertical'
             Image:
-                source: "pictures/Lelis tela 2.png"
+                source: "pictures/leli2.png"
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 size: 280, 500
                 
-
             MDIconButton: 
                 icon_size: "34sp"
                 pos_hint: {"center_x": .85, "center_y": .9}
-                icon:"pictures/logout-custom (1).png"
+                icon:"logout"
                 on_release: root.sair() 
                                 
             MDTextField:
@@ -30,9 +28,7 @@
                 size_hint_x: None
                 pos_hint: {"center_x": 0.5, "center_y": 0.81}
                 valign: "middle"
-                
-            
-            
+                                        
             MDFloatLayout:
                 size_hint: .26, .14
                 focus_behavior: True
@@ -50,8 +46,7 @@
                     adaptive_size: True
                     bold: True
                     pos_hint: {"center_x": .5, "center_y": .2}            
-        
-    
+            
             MDFloatLayout:
                 size_hint: .26, .14
                 focus_behavior: True
@@ -69,8 +64,7 @@
                     adaptive_size: True
                     bold: True
                     pos_hint: {"center_x": .5, "center_y": .2}                            
-                            
-                    
+                                              
             MDFloatLayout:
                 size_hint: .26, .14
                 focus_behavior: True
@@ -87,8 +81,7 @@
                     adaptive_size: True
                     bold: True
                     pos_hint: {"center_x": .5, "center_y": .2}
-                
-                
+                                
             MDFloatLayout:
                 size_hint: .26, .14
                 focus_behavior: True
@@ -105,8 +98,7 @@
                     halign: "center"
                     adaptive_size: True
                     bold: True
-                    pos_hint: {"center_x": .5, "center_y": .2}           
-                
+                    pos_hint: {"center_x": .5, "center_y": .2}                         
 
             MDFloatLayout:
                 size_hint: .26, .14
@@ -189,7 +181,6 @@
                     pos_hint: {"center_x": .5, "center_y": .6}
                     icon:"pictures/procurar.png"
                     on_release: root.tela_outros()
-
                 
                 MDLabel:
                     text:"Todos"
@@ -205,7 +196,7 @@
                 pos_hint: {"center_x": .20, "center_y": .08}                        
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/home-custom.png"
+                    icon:"home"
                     on_release: root.voltar_para_home()
             
             MDFloatLayout:
@@ -214,7 +205,7 @@
                 pos_hint: {"center_x": .40, "center_y": .08}                        
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/format-list-bulleted-custom (1).png"
+                    icon:"format-list-bulleted"
                     on_release: root.listar()                      
             
             MDFloatLayout:
@@ -224,7 +215,7 @@
                 
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/heart-outline-custom.png"                            
+                    icon:"heart-outline"                            
                     on_release: root.favoritos()
 
             MDFloatLayout:
@@ -234,5 +225,5 @@
                         
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/account-cog-custom.png"
+                    icon:"account-cog"
                     on_release: root.editaPerfil()
