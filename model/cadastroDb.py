@@ -12,7 +12,7 @@ class CadastroDb:
     if(cpf in respostaFuncao):
       return False
     else:
-      requests.put(f'{firebase}/usuarios/{cpf}.json', data = json.dumps(dados))
+      requests.put(f'{firebase}/usuarios/{cpf}.json', data =json.dumps(dados))
       return True
      
   def consulta_usuario(cpf):
@@ -31,4 +31,3 @@ class CadastroDb:
     edicao = requests.patch(f'{firebase}/usuarios/{cpf}.json',data=json.dumps(dados))
     res = json.dumps(edicao.json()) 
     return res
-
