@@ -5,14 +5,32 @@
         size: 280, 500
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         orientation: "vertical"
-
         
         MDFloatLayout:
             orientation:'vertical'
             Image:
-                source: "pictures/Lelis tela 2.png"
+                source: "pictures/leli2.png"
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 size: 280, 500
+            MDFloatLayout:
+                size_hint: None, None
+                size: 230, 28
+                background_color: 0, 0, 0, .5
+                pos_hint: {"center_x": 0.5, "center_y": .9}
+                md_bg_color: 0, 0, 0, 0
+                line_color: 0, 0, 0, 0
+
+                MDIconButton:
+                    size: 20, 20
+                    pos_hint: {"center_x": 0.1, "center_y": 0.7}
+                    icon:"arrow-left"
+                    on_release: root.volta()
+
+                MDIconButton:
+                    icon_size: "34sp"
+                    pos_hint: {"center_x": .9, "center_y": .9}
+                    icon:"logout"
+                    on_release: root.sair()                  
                 
             MDTextField:
                 hint_text: "Pesquisar..."
@@ -29,8 +47,6 @@
                 width: 220
                 halign:"center"
                 pos_hint: {"center_x": 0.5, "center_y": 0.75}
-                theme_text_color: "Custom"
-                text_color: 66/255, 0/255, 80/255, 100
             
             MDBoxLayout:
                 size_hint: .80, .55
@@ -42,26 +58,31 @@
                         
                         OneLineAvatarIconListItem:
                             text: "Residencial"
+                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "pictures/home-outline-custom.png"                            
+                                icon: "home-outline" 
+
                         OneLineAvatarIconListItem:
                             text: "Comercial"
+                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "pictures/store-outline-custom.png"                            
+                                icon: "store-outline"                            
                                 
                         OneLineAvatarIconListItem:
                             text: "Industrial"
+                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "pictures/domain-custom.png"                            
+                                icon: "domain"                            
                                 
                         OneLineAvatarIconListItem:
                             text: "Rural"
+                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "pictures/tractor-variant-custom.png"                            
+                                icon: "tractor-variant"                            
     
             MDFloatLayout:
                 size_hint: .26, .14
@@ -69,7 +90,7 @@
                 pos_hint: {"center_x": .20, "center_y": .08}                        
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/home-custom.png"
+                    icon:"home"
                     on_release: root.voltar_para_home()
             
             MDFloatLayout:
@@ -78,7 +99,7 @@
                 pos_hint: {"center_x": .40, "center_y": .08}                        
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/format-list-bulleted-custom (1).png"
+                    icon:"format-list-bulleted"
                     on_release: root.listar()                      
             
             MDFloatLayout:
@@ -88,7 +109,7 @@
                 
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/heart-outline-custom.png"                            
+                    icon:"heart-outline"                            
                     on_release: root.favoritos()
 
             MDFloatLayout:
@@ -98,5 +119,5 @@
                         
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"pictures/account-cog-custom.png"
+                    icon:"account-cog-custom"
                     on_release: root.editaPerfil()
