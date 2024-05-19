@@ -5,33 +5,14 @@
         size: 280, 500
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         orientation: "vertical"
+
         
         MDFloatLayout:
             orientation:'vertical'
             Image:
-                source: "pictures/leli2.png"
+                source: "pictures/Lelis tela 2.png"
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 size: 280, 500
-
-            MDFloatLayout:
-                size_hint: None, None
-                size: 230, 28
-                background_color: 0, 0, 0, .5
-                pos_hint: {"center_x": 0.5, "center_y": .9}
-                md_bg_color: 0, 0, 0, 0
-                line_color: 0, 0, 0, 0
-
-                MDIconButton:
-                    size: 20, 20
-                    pos_hint: {"center_x": 0.1, "center_y": 0.7}
-                    icon:"arrow-left"
-                    on_release: root.volta()
-
-                MDIconButton:
-                    icon_size: "34sp"
-                    pos_hint: {"center_x": .9, "center_y": .9}
-                    icon:"logout"
-                    on_release: root.sair()
                 
             MDTextField:
                 hint_text: "Pesquisar..."
@@ -48,7 +29,9 @@
                 width: 220
                 halign:"center"
                 pos_hint: {"center_x": 0.5, "center_y": 0.75}
-           
+                theme_text_color: "Custom"
+                text_color: 66/255, 0/255, 80/255, 100
+            
             MDBoxLayout:
                 size_hint: .80, .55
                 pos_hint: {"center_x": 0.5, "center_y": 0.45}
@@ -60,52 +43,48 @@
                         OneLineAvatarIconListItem:
                             text: "Gatos"
                             width: 220
-                            on_release: root.tela_cadastrados()
                             IconLeftWidget:
-                                icon: "cat"                            
+                                icon: "pictures/cat-custom.png"                            
                                 
                         OneLineAvatarIconListItem:
                             text: "Cães"
-                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "dog-side"                            
+                                icon: "pictures/dog-side-custom.png"                            
                                 
                         OneLineAvatarIconListItem:
                             text: "Aves"
-                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "bird"                            
+                                icon: "pictures/bird-custom.png"                            
                         
                         OneLineAvatarIconListItem:
                             text: "Vacas"
-                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "cow"                            
+                                icon: "pictures/cow-custom.png"                            
 
                         OneLineAvatarIconListItem:
                             text: "Equínos"
-                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "horse" 
+                                icon: "pictures/horse-custom.png" 
                     
                         OneLineAvatarIconListItem:
                             text: "Silvestres"
-                            on_release: root.tela_cadastrados()
 
                             IconLeftWidget:
-                                icon: "kangaroo"                            
+                                icon: "pictures/kangaroo-custom.png"                            
                         
+
+
             MDFloatLayout:
                 size_hint: .26, .14
                 background_color: 0, 0, 0, 0
                 pos_hint: {"center_x": .20, "center_y": .08}                        
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"home"
+                    icon:"pictures/home-custom.png"
                     on_release: root.voltar_para_home()
             
             MDFloatLayout:
@@ -114,7 +93,7 @@
                 pos_hint: {"center_x": .40, "center_y": .08}                        
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"format-list-bulleted"
+                    icon:"pictures/format-list-bulleted-custom (1).png"
                     on_release: root.listar()                      
             
             MDFloatLayout:
@@ -124,7 +103,7 @@
                 
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"heart-outline"                            
+                    icon:"pictures/heart-outline-custom.png"                            
                     on_release: root.favoritos()
 
             MDFloatLayout:
@@ -134,5 +113,5 @@
                         
                 MDIconButton: 
                     pos_hint: {"center_x": .5, "center_y": .6}
-                    icon:"account-cog"
+                    icon:"pictures/account-cog-custom.png"
                     on_release: root.editaPerfil()           
