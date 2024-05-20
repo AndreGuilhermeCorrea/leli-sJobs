@@ -3,11 +3,13 @@ from kivymd.app import MDApp
 from kaki.app import App
 from kivy.factory import Factory
 
-# main app class for kaki app with kivymd modules
+from kivy.core.window import Window
+
+Window.size = (350, 580)
+
 class LelisApp(MDApp, App):
 
-    #variável de ambiente
-    DEBUG = 1 # set this to 0 make live app not working
+    DEBUG = 1
 
     #arquivos kv (telas)
     KV_FILES = {
@@ -27,10 +29,12 @@ class LelisApp(MDApp, App):
         os.path.join(os.getcwd(), "view/teladoisScreen.kv"),
         os.path.join(os.getcwd(), "view/editarperfilScreen.kv"),
         os.path.join(os.getcwd(), "view/favoritosScreen.kv"),
-        os.path.join(os.getcwd(), "view/listartodosScreen.kv"),      
-  
+        os.path.join(os.getcwd(), "view/listartodosScreen.kv"),    
+        os.path.join(os.getcwd(), "view/chatScreen.kv"), 
+        os.path.join(os.getcwd(), "view/perfisScreen.kv"),
+        os.path.join(os.getcwd(), "view/formularioScreen.kv"),
     }
-
+    
     #classes que controlam os kv's
     CLASSES = {
         "MainScreenManager": "controller.screenmanager",
