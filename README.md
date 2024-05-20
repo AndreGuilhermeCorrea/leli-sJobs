@@ -25,6 +25,7 @@ Orientador: Prof. Evandro Carlos Teruel
 
 
 ### 📹 Link do vídeo explicativo:
+- [Video](https://youtu.be/UWSz7Pw5ffw)
 
 ### 🔗 Links dos bancos de dados noSQL:
 - [Firebase Realtime Database 1](https://lelisjobschatdb-default-rtdb.firebaseio.com/)
