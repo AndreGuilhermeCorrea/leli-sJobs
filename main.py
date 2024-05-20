@@ -35,6 +35,7 @@ class LelisApp(MDApp, App):
         os.path.join(os.getcwd(), "view/formularioScreen.kv"),
     }
     
+    
     #classes que controlam os kv's
     CLASSES = {
         "MainScreenManager": "controller.screenmanager",
@@ -53,12 +54,12 @@ class LelisApp(MDApp, App):
         "TelaDoisScreen": "controller.teladoisScreen",
         "EditarPerfilScreen": "controller.editarperfilScreen",
         "FavoritosScreen": "controller.favoritosScreen",
-        "ListarTodosScreen": "controller.listartodosScreen",        
-   
-        
+        "ListarTodosScreen": "controller.listartodosScreen",
+        "ChatScreen": "controller.chatScreen",
+        "PerfisScreen": "controller.perfisScreen",
+        "FormularioScreen": "controller.formularioScreen",
     }
 
-    # auto reload path
     AUTORELOADER_PATHS = [
         (".", {"recursive": True}),
     ]
@@ -67,10 +68,11 @@ class LelisApp(MDApp, App):
     def build_app(self):
         
         self.theme_cls.theme_style="Light"
-        self.theme_cls.primary_palette="Blue"        
+        self.theme_cls.primary_palette="Orange"        
+
         #gerenciador de telas principal
         return Factory.MainScreenManager()
-
+    
 #roda o app
 if __name__ == "__main__":
     LelisApp().run()
